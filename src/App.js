@@ -21,11 +21,14 @@ function App() {
   return (
     <div className="App">
      <h1>CoinAPI Cryptocurrency Portfolio Tracker App</h1>
-     <ul>
+     <div className="portfolio">
         {Object.entries(portfolio).map(([asset, exchangeRate]) => (
-          <li key={asset}>{asset}/USD: {exchangeRate}</li>
+          <li key={asset} className="portfolio-item">
+            <span className="asset-name">{asset}/USD:</span> 
+            <span className="asset-rate">{exchangeRate}</span>
+          </li>
         ))}
-      </ul>
+      </div>
     </div>
   );
 }
