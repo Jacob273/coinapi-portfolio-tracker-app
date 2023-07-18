@@ -17,6 +17,13 @@ function App() {
       setPortfolio(exchangeRates);
     }
     fetchExchangeRates();
+
+   // Fetch exchange rates every 5 seconds
+   const intervalId = setInterval(fetchExchangeRates, 5000);
+
+   // Clean up the interval when the component unmounts to avoid memory leaks
+   return () => clearInterval(intervalId);
+
   }, []);
   return (
     <div className="App">
