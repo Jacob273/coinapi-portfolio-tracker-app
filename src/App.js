@@ -23,7 +23,7 @@ function App() {
      <h1>CoinAPI Cryptocurrency Portfolio Tracker App</h1>
      <ul>
         {Object.entries(portfolio).map(([asset, exchangeRate]) => (
-          <li key={asset}>{asset}: {exchangeRate}</li>
+          <li key={asset}>{asset}/USD: {exchangeRate}</li>
         ))}
       </ul>
     </div>
